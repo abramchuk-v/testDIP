@@ -8,10 +8,10 @@
 import Dip
 import UIKit
 
-let assemblyServices = [loginService]
-
 // MARK: - Login Service
 
-private let loginService = DependencyContainer() { container in
-    container.register(.singleton, type: LoginServiceProtocol.self) { LoginService() }
+final class ServiceAssembly: Assembly {
+    func assemble(container: DependencyContainer) {
+        container.register(.singleton, type: LoginServiceProtocol.self) { LoginService() }
+    }
 }

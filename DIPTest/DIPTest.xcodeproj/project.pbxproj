@@ -22,8 +22,9 @@
 		0445230A257CC9D50097BAE8 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04452308257CC9D50097BAE8 /* LoginViewController.swift */; };
 		0445230B257CC9D50097BAE8 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04452309257CC9D50097BAE8 /* LoginViewController.xib */; };
 		04452314257CCB530097BAE8 /* LoginModulesFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04452313257CCB530097BAE8 /* LoginModulesFactory.swift */; };
-		04B6E4A7257CE6A100AAA2C5 /* CoordinatorsAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B6E4A6257CE6A100AAA2C5 /* CoordinatorsAssembly.swift */; };
-		04B6E4AC257CE6AD00AAA2C5 /* ModulesAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B6E4AB257CE6AD00AAA2C5 /* ModulesAssembly.swift */; };
+		0447D3B2258DEDF20022A6DD /* Assembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0447D3B1258DEDF20022A6DD /* Assembler.swift */; };
+		0447D3BB258DEF790022A6DD /* LoginAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0447D3BA258DEF790022A6DD /* LoginAssembly.swift */; };
+		0447D3C4258DEFCF0022A6DD /* DetailsAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0447D3C3258DEFCF0022A6DD /* DetailsAssembly.swift */; };
 		04B6E4B1257CE8D100AAA2C5 /* DetailsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B6E4B0257CE8D100AAA2C5 /* DetailsCoordinator.swift */; };
 		04B6E4BC257CE97B00AAA2C5 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B6E4BA257CE97B00AAA2C5 /* DetailsViewController.swift */; };
 		04B6E4BD257CE97B00AAA2C5 /* DetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04B6E4BB257CE97B00AAA2C5 /* DetailsViewController.xib */; };
@@ -71,8 +72,9 @@
 		04452308257CC9D50097BAE8 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		04452309257CC9D50097BAE8 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		04452313257CCB530097BAE8 /* LoginModulesFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModulesFactory.swift; sourceTree = "<group>"; };
-		04B6E4A6257CE6A100AAA2C5 /* CoordinatorsAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorsAssembly.swift; sourceTree = "<group>"; };
-		04B6E4AB257CE6AD00AAA2C5 /* ModulesAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModulesAssembly.swift; sourceTree = "<group>"; };
+		0447D3B1258DEDF20022A6DD /* Assembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assembler.swift; sourceTree = "<group>"; };
+		0447D3BA258DEF790022A6DD /* LoginAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAssembly.swift; sourceTree = "<group>"; };
+		0447D3C3258DEFCF0022A6DD /* DetailsAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsAssembly.swift; sourceTree = "<group>"; };
 		04B6E4B0257CE8D100AAA2C5 /* DetailsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsCoordinator.swift; sourceTree = "<group>"; };
 		04B6E4BA257CE97B00AAA2C5 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		04B6E4BB257CE97B00AAA2C5 /* DetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailsViewController.xib; sourceTree = "<group>"; };
@@ -108,6 +110,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0407592F258DE66F00AB6587 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				04B6E4B0257CE8D100AAA2C5 /* DetailsCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		04075930258DE67500AB6587 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				04B6E4C9257CEA2D00AAA2C5 /* DetailsModuleFactory.swift */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		04075931258DE69500AB6587 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				04452313257CCB530097BAE8 /* LoginModulesFactory.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		04075932258DE69B00AB6587 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				044522FB257CC5680097BAE8 /* LoginCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
 		04452286257CBAB20097BAE8 = {
 			isa = PBXGroup;
 			children = (
@@ -135,10 +169,8 @@
 				04452294257CBAB20097BAE8 /* SceneDelegate.swift */,
 				04C6330E257CE30800617773 /* Assembly */,
 				04C632FD257CCE4E00617773 /* Navigator */,
-				04452312257CCB3E0097BAE8 /* ModulesFactory */,
 				044522ED257CC3870097BAE8 /* CoordinatorFactory */,
 				044522DF257CBE370097BAE8 /* Services */,
-				04452306257CC99C0097BAE8 /* Coordinators */,
 				04452307257CC9AF0097BAE8 /* Screens */,
 				044522C5257CBAE00097BAE8 /* SupportingFiles */,
 			);
@@ -190,15 +222,6 @@
 			path = CoordinatorFactory;
 			sourceTree = "<group>";
 		};
-		04452306257CC99C0097BAE8 /* Coordinators */ = {
-			isa = PBXGroup;
-			children = (
-				044522FB257CC5680097BAE8 /* LoginCoordinator.swift */,
-				04B6E4B0257CE8D100AAA2C5 /* DetailsCoordinator.swift */,
-			);
-			path = Coordinators;
-			sourceTree = "<group>";
-		};
 		04452307257CC9AF0097BAE8 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
@@ -208,18 +231,28 @@
 			path = Screens;
 			sourceTree = "<group>";
 		};
-		04452312257CCB3E0097BAE8 /* ModulesFactory */ = {
+		0447D3B9258DEF650022A6DD /* Assembler */ = {
 			isa = PBXGroup;
 			children = (
-				04452313257CCB530097BAE8 /* LoginModulesFactory.swift */,
-				04B6E4C9257CEA2D00AAA2C5 /* DetailsModuleFactory.swift */,
+				0447D3BA258DEF790022A6DD /* LoginAssembly.swift */,
 			);
-			path = ModulesFactory;
+			path = Assembler;
+			sourceTree = "<group>";
+		};
+		0447D3C2258DEFC10022A6DD /* Assembler */ = {
+			isa = PBXGroup;
+			children = (
+				0447D3C3258DEFCF0022A6DD /* DetailsAssembly.swift */,
+			);
+			path = Assembler;
 			sourceTree = "<group>";
 		};
 		04B6E4B5257CE93C00AAA2C5 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				0447D3B9258DEF650022A6DD /* Assembler */,
+				04075932258DE69B00AB6587 /* Coordinator */,
+				04075931258DE69500AB6587 /* Models */,
 				04452308257CC9D50097BAE8 /* LoginViewController.swift */,
 				04452309257CC9D50097BAE8 /* LoginViewController.xib */,
 				04C632F8257CCD8E00617773 /* LoginViewModel.swift */,
@@ -230,6 +263,9 @@
 		04B6E4B9257CE95A00AAA2C5 /* Details */ = {
 			isa = PBXGroup;
 			children = (
+				0447D3C2258DEFC10022A6DD /* Assembler */,
+				04075930258DE67500AB6587 /* Modules */,
+				0407592F258DE66F00AB6587 /* Coordinator */,
 				04B6E4BA257CE97B00AAA2C5 /* DetailsViewController.swift */,
 				04B6E4BB257CE97B00AAA2C5 /* DetailsViewController.xib */,
 				04B6E4C4257CE98700AAA2C5 /* DetailsViewModel.swift */,
@@ -249,8 +285,7 @@
 			isa = PBXGroup;
 			children = (
 				044522E0257CBE4A0097BAE8 /* ServiceAssembly.swift */,
-				04B6E4A6257CE6A100AAA2C5 /* CoordinatorsAssembly.swift */,
-				04B6E4AB257CE6AD00AAA2C5 /* ModulesAssembly.swift */,
+				0447D3B1258DEDF20022A6DD /* Assembler.swift */,
 			);
 			path = Assembly;
 			sourceTree = "<group>";
@@ -392,16 +427,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04B6E4A7257CE6A100AAA2C5 /* CoordinatorsAssembly.swift in Sources */,
 				044522E1257CBE4A0097BAE8 /* ServiceAssembly.swift in Sources */,
+				0447D3C4258DEFCF0022A6DD /* DetailsAssembly.swift in Sources */,
 				044522E9257CBEA40097BAE8 /* LoginService.swift in Sources */,
 				04B6E4C5257CE98700AAA2C5 /* DetailsViewModel.swift in Sources */,
+				0447D3B2258DEDF20022A6DD /* Assembler.swift in Sources */,
 				044522EF257CC39A0097BAE8 /* CoordinatorFactory.swift in Sources */,
 				044522F7257CC41E0097BAE8 /* BaseCoordinator.swift in Sources */,
 				0445230A257CC9D50097BAE8 /* LoginViewController.swift in Sources */,
 				04C6330A257CCE6700617773 /* Navigator.swift in Sources */,
-				04B6E4AC257CE6AD00AAA2C5 /* ModulesAssembly.swift in Sources */,
 				04B6E4CA257CEA2D00AAA2C5 /* DetailsModuleFactory.swift in Sources */,
+				0447D3BB258DEF790022A6DD /* LoginAssembly.swift in Sources */,
 				04452293257CBAB20097BAE8 /* AppDelegate.swift in Sources */,
 				044522FC257CC5680097BAE8 /* LoginCoordinator.swift in Sources */,
 				04452314257CCB530097BAE8 /* LoginModulesFactory.swift in Sources */,

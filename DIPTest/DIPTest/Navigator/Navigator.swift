@@ -18,7 +18,7 @@ extension UIViewController: Presentable {
     }
 }
 
-protocol NavigatorProtocol {
+protocol NavigatorProtocol: Presentable {
     
     func present(_ module: Presentable?)
     func present(_ module: Presentable?, animated: Bool)
@@ -38,7 +38,7 @@ protocol NavigatorProtocol {
 
 final class Navigator: NSObject, NavigatorProtocol, Presentable {
     
-    private weak var rootController: UINavigationController?
+    private var rootController: UINavigationController?
     private var completions: [UIViewController : () -> Void]
     private var transition: UIViewControllerAnimatedTransitioning?
     
